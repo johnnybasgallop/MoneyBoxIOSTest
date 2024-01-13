@@ -28,6 +28,7 @@ final class LoginModelTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
         
         XCTAssertEqual(string, "success")
+        XCTAssertEqual(loginViewModel.userInfo.name, "Peter")
             
     }
     

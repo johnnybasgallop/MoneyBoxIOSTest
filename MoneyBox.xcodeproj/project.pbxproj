@@ -10,6 +10,9 @@
 		CA950DD02B5167CC00E0DFCD /* MoneyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */; };
 		CA950DD82B51681C00E0DFCD /* LoginModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */; };
 		CA950DDC2B517E5900E0DFCD /* PinModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DDB2B517E5900E0DFCD /* PinModelTests.swift */; };
+		CA950DE32B51C79700E0DFCD /* InvestmentAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DE22B51C79700E0DFCD /* InvestmentAccountModel.swift */; };
+		CA950DE52B51CBC100E0DFCD /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DE42B51CBC100E0DFCD /* UserInfo.swift */; };
+		CA950DE82B52D1C500E0DFCD /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DE72B52D1C500E0DFCD /* LogoutView.swift */; };
 		CAB209A12B4DC44300D087E4 /* MoneyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB209A02B4DC44300D087E4 /* MoneyBoxApp.swift */; };
 		CAB209A32B4DC44300D087E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB209A22B4DC44300D087E4 /* ContentView.swift */; };
 		CAB209A52B4DC44500D087E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB209A42B4DC44500D087E4 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxTests.swift; sourceTree = "<group>"; };
 		CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTests.swift; sourceTree = "<group>"; };
 		CA950DDB2B517E5900E0DFCD /* PinModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModelTests.swift; sourceTree = "<group>"; };
+		CA950DE22B51C79700E0DFCD /* InvestmentAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentAccountModel.swift; sourceTree = "<group>"; };
+		CA950DE42B51CBC100E0DFCD /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CA950DE72B52D1C500E0DFCD /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
 		CAB2099D2B4DC44300D087E4 /* MoneyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB209A02B4DC44300D087E4 /* MoneyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxApp.swift; sourceTree = "<group>"; };
 		CAB209A22B4DC44300D087E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,22 @@
 			path = LoginTests;
 			sourceTree = "<group>";
 		};
+		CA950DDD2B51C59800E0DFCD /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CA950DE22B51C79700E0DFCD /* InvestmentAccountModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		CA950DE62B52D1AD00E0DFCD /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				CA950DE72B52D1C500E0DFCD /* LogoutView.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
 		CAB209942B4DC44300D087E4 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,7 @@
 		CAB209B72B4DDF3A00D087E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA950DE62B52D1AD00E0DFCD /* Logout */,
 				CAB209BF2B4DE1C400D087E4 /* Dashboard */,
 				CAB209BA2B4DE01700D087E4 /* Login */,
 				CAB209A02B4DC44300D087E4 /* MoneyBoxApp.swift */,
@@ -143,6 +166,8 @@
 		CAB209B92B4DDF5000D087E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA950DE42B51CBC100E0DFCD /* UserInfo.swift */,
+				CA950DDD2B51C59800E0DFCD /* Dashboard */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,12 +320,15 @@
 			files = (
 				CAB209A32B4DC44300D087E4 /* ContentView.swift in Sources */,
 				CAB209A12B4DC44300D087E4 /* MoneyBoxApp.swift in Sources */,
+				CA950DE82B52D1C500E0DFCD /* LogoutView.swift in Sources */,
 				CAB209C62B4EB94000D087E4 /* PinView.swift in Sources */,
 				CAB209C12B4DE1DE00D087E4 /* DashboardView.swift in Sources */,
+				CA950DE52B51CBC100E0DFCD /* UserInfo.swift in Sources */,
 				CAB209C82B505D6700D087E4 /* CreatePinView.swift in Sources */,
 				CAB209CD2B5061C000D087E4 /* EnterPinView.swift in Sources */,
 				CAB209C32B4DE1EA00D087E4 /* DashboardViewModel.swift in Sources */,
 				CAB209BE2B4DE03100D087E4 /* LoginView.swift in Sources */,
+				CA950DE32B51C79700E0DFCD /* InvestmentAccountModel.swift in Sources */,
 				CAB209BC2B4DE02700D087E4 /* LoginViewModel.swift in Sources */,
 				CAB209CB2B5060B700D087E4 /* PinViewModel.swift in Sources */,
 			);

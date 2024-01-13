@@ -11,45 +11,34 @@ import SwiftUI
 extension LoginViewModel {
     
     func loginUserWithPin(pin: String, completion: @escaping (Bool) -> Void){
-        
-        
-        
         if pin == loginPin{
             print(loginPin)
             
             loginUserWithEmailAndPassword(username: self.savedUsername, password: self.savedPassword){success in
                 print(success)
             }
-            
             withAnimation{
-                loggedIn = true
+                userInfo.loggedin = true
             }
-            
             completion(true)
         }
           
         else if pin != loginPin{
-            loggedIn = false
+            userInfo.loggedin = false
             completion(false)
         }
-        
     }
     
     func handleLoginPinInput(number: String){
-        
-        
         if self.pin.count <= 2 && number != "delete.fill" {
             self.pin.append(number)
-            
         }
         
         else if self.pin.count >= 3 && number != "delete.fill"{
-            print("done")
             self.pin.append(number)
             
             loginUserWithPin(pin: self.pin) { completion in
                 if completion == true {
-                    print("success your logged in")
                     self.wrongPin = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.2){
                         self.pin = ""
@@ -74,13 +63,10 @@ extension LoginViewModel {
             self.pin.append(number)
         }
         
-        
-        
         else if self.pin.count >= 3 && number != "delete.fill"{
-            
             self.pin.append(number)
             self.loginPin = self.pin
-            self.loggedIn = true
+            self.userInfo.loggedin = true
         }
         
         if number == "delete.fill" {

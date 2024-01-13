@@ -8,35 +8,80 @@
 import SwiftUI
 import Networking
 struct DashboardView: View {
-    @EnvironmentObject var loginViewModel : LoginViewModel
-    let dataProvider = DataProvider()
     
+    @EnvironmentObject var dashboardViewModel : DashboardViewModel
+    @EnvironmentObject var loginViewModel : LoginViewModel
+
     var body: some View {
         VStack{
+            TopNav()
+            Spacer()
+            AccountList()
+            Spacer()
+        }
+        
+       
+    }
+    
+}
+
+struct TopNav : View {
+    @EnvironmentObject var loginViewModel : LoginViewModel
+    var body: some View {
+        HStack{
+            Text("MoneyBox").font(.system(size: 35, weight: .semibold)).foregroundColor(Color("primaryColor"))
+            
+            Spacer()
+            
             Button(action: {
                 loginViewModel.logout()
             }, label: {
                 Text("logout")
             })
+        }
+        .padding(.vertical, 10).padding(.horizontal, 25)
+        
+    }
+}
+
+
+struct AccountList : View {
+    @EnvironmentObject var dashboardViewModel : DashboardViewModel
+    
+    var body: some View {
+        VStack{
+            ForEach(dashboardViewModel.accounts, id: \.self){account in
+                    StocksAndSharesISACard()
+            }
+        }.onAppear{
+            print("accounts after load: \(dashboardViewModel.accounts)")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
+                print("current accounts:  \(dashboardViewModel.accounts)")
+            }
             
-            Button(action: {
-                dataProvider.fetchProducts(){result in
-                    switch result{
-                    case .success(let response):
-                        print(response)
-                        
-                    case .failure(let response):
-                        print(response)
-                         
-                    }
-                }
-            }, label: {
-                Text("get Data")
-            })
         }
     }
 }
 
-#Preview {
-    DashboardView()
+
+struct StocksAndSharesISACard : View {
+//    User naviagtion to transition to the the add money screens
+    var body: some View {
+        RoundedRectangle(cornerRadius: 30)
+            .frame(width: screenWidth * 0.85, height: screenWidth * 0.45)
+            .foregroundColor(.red)
+    }
 }
+
+struct LISACard : View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 30)
+            .frame(width: screenWidth * 0.85, height: screenWidth * 0.45)
+            .foregroundColor(.blue)
+    }
+}
+
+#Preview {
+    DashboardView().environmentObject(DashboardViewModel())
+}
+
