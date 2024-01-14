@@ -12,16 +12,13 @@ import Networking
 final class LoginViewModel: ObservableObject {
     let dataprovider = DataProvider()
     let sessionManager = SessionManager()
-    
-    
-    
-    
+
     @AppStorage("token") var token: String = ""
     @AppStorage("savedUsername") var savedUsername : String = ""
     @AppStorage("savedPassword") var savedPassword : String = ""
     @AppStorage("loginPin") var loginPin : String = ""
     
-    @Published var userInfo  : UserInfo = UserInfo(name: "", totalPlanValue: 0.00, loggedin: false)
+    @Published var userInfo  : UserInfo = UserInfo(name: "", loggedin: false)
     @Published var wrongPin : Bool = false
     @Published var pin : String = ""
     
@@ -46,6 +43,7 @@ final class LoginViewModel: ObservableObject {
                 self.token = response.session.bearerToken
                  
                 guard let name = response.user.firstName else{return}
+                
                 self.userInfo.name = name
                 
                 self.sessionManager.setUserToken(response.session.bearerToken)

@@ -9,6 +9,5 @@ import Foundation
 
 struct UserInfo {
     var name : String
-    var totalPlanValue : Double
     var loggedin : Bool
 }

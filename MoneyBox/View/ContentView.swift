@@ -16,6 +16,7 @@ let screenWidth = UIScreen.main.bounds.width
 struct ContentView: View {
     @StateObject var loginViewModel = LoginViewModel()
     @StateObject var dashboardViewModel = DashboardViewModel()
+    
     var body: some View {
         VStack{
             if loginViewModel.userInfo.loggedin == false{
@@ -37,7 +38,7 @@ struct ContentView: View {
                     .environmentObject(dashboardViewModel)
                 
                     .onAppear{
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1){
                             dashboardViewModel.fetchUserData()
                         }
                     }
