@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1C9F8F2B54830800398791 /* AccountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F8E2B54830800398791 /* AccountCardView.swift */; };
+		CA1C9F912B54839400398791 /* TopNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F902B54839400398791 /* TopNavView.swift */; };
+		CA1C9F952B54844F00398791 /* DashboardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F942B54844F00398791 /* DashboardModelTests.swift */; };
 		CA950DD02B5167CC00E0DFCD /* MoneyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */; };
 		CA950DD82B51681C00E0DFCD /* LoginModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */; };
 		CA950DDC2B517E5900E0DFCD /* PinModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DDB2B517E5900E0DFCD /* PinModelTests.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA1C9F8E2B54830800398791 /* AccountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardView.swift; sourceTree = "<group>"; };
+		CA1C9F902B54839400398791 /* TopNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavView.swift; sourceTree = "<group>"; };
+		CA1C9F942B54844F00398791 /* DashboardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModelTests.swift; sourceTree = "<group>"; };
 		CA950DCD2B5167CC00E0DFCD /* MoneyBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxTests.swift; sourceTree = "<group>"; };
 		CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTests.swift; sourceTree = "<group>"; };
@@ -78,9 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1C9F8D2B54829800398791 /* DashboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA1C9F942B54844F00398791 /* DashboardModelTests.swift */,
+			);
+			path = DashboardTests;
+			sourceTree = "<group>";
+		};
 		CA950DCE2B5167CC00E0DFCD /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				CA1C9F8D2B54829800398791 /* DashboardTests */,
 				CA950DD62B5167F800E0DFCD /* LoginTests */,
 				CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */,
 			);
@@ -176,6 +191,8 @@
 			children = (
 				CAB209C02B4DE1DE00D087E4 /* DashboardView.swift */,
 				CAB209C22B4DE1EA00D087E4 /* DashboardViewModel.swift */,
+				CA1C9F8E2B54830800398791 /* AccountCardView.swift */,
+				CA1C9F902B54839400398791 /* TopNavView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -297,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1C9F952B54844F00398791 /* DashboardModelTests.swift in Sources */,
 				CA950DD02B5167CC00E0DFCD /* MoneyBoxTests.swift in Sources */,
 				CA950DD82B51681C00E0DFCD /* LoginModelTests.swift in Sources */,
 				CA950DDC2B517E5900E0DFCD /* PinModelTests.swift in Sources */,
@@ -310,12 +328,14 @@
 				CAB209A32B4DC44300D087E4 /* ContentView.swift in Sources */,
 				CAB209A12B4DC44300D087E4 /* MoneyBoxApp.swift in Sources */,
 				CAB209C62B4EB94000D087E4 /* PinView.swift in Sources */,
+				CA1C9F8F2B54830800398791 /* AccountCardView.swift in Sources */,
 				CAB209C12B4DE1DE00D087E4 /* DashboardView.swift in Sources */,
 				CA950DE52B51CBC100E0DFCD /* UserInfo.swift in Sources */,
 				CAB209C82B505D6700D087E4 /* CreatePinView.swift in Sources */,
 				CAB209CD2B5061C000D087E4 /* EnterPinView.swift in Sources */,
 				CAB209C32B4DE1EA00D087E4 /* DashboardViewModel.swift in Sources */,
 				CAB209BE2B4DE03100D087E4 /* LoginView.swift in Sources */,
+				CA1C9F912B54839400398791 /* TopNavView.swift in Sources */,
 				CA950DE32B51C79700E0DFCD /* InvestmentAccountModel.swift in Sources */,
 				CAB209BC2B4DE02700D087E4 /* LoginViewModel.swift in Sources */,
 				CAB209CB2B5060B700D087E4 /* PinViewModel.swift in Sources */,

@@ -13,8 +13,42 @@ class DashboardViewModel : ObservableObject {
     @Published var accounts : [InvestmentAccountModel] = []
     @Published var totalPlanValue : Double = 0.0
     @Published var loading : Bool = true
+
+    
+    func fetchUserData(completion : @escaping (Bool) -> Void) {
+        dataProvider.fetchProducts(){result in
+            switch result{
+            case .success(let response):
+                
+                guard let totalPlanValue = response.totalPlanValue else {return}
+                self.totalPlanValue = totalPlanValue
+                
+                guard let accounts = response.accounts else{return}
+                guard let responses = response.productResponses else {return}
+                self.handleAccountResponse(accounts: accounts, productResponses: responses){success in
+                    if success{
+                        print("success")
+                        self.loading = false
+                        completion(true)
+                    }
+                    
+                    else if !success
+                    {
+                        print("failed")
+                        completion(false)
+                    }
+                }
+                
+            case .failure(let response):
+                print(response)
+                completion(false)
+            }
+        }
+    }
+    
     
     func handleAccountResponse(accounts : [Account], productResponses: [ProductResponse], completion: @escaping (Bool) -> Void) {
+        
         for account in accounts {
             
             for response in productResponses {
@@ -39,43 +73,16 @@ class DashboardViewModel : ObservableObject {
     }
     
     
-    func fetchUserData() {
-        dataProvider.fetchProducts(){result in
-            switch result{
-            case .success(let response):
-                
-                guard let totalPlanValue = response.totalPlanValue else {return}
-                self.totalPlanValue = totalPlanValue
-                
-                guard let accounts = response.accounts else{return}
-                guard let responses = response.productResponses else {return}
-                self.handleAccountResponse(accounts: accounts, productResponses: responses){success in
-                    if success{
-                        print("success")
-                        self.loading = false
-                    }
-                    
-                    else if !success
-                    {
-                        print("failed")
-                        
-                    }
-                }
-                
-            case .failure(let response):
-                print(response)
-                 
-            }
-        }
-    }
     
     func roundUpDouble(value: Double, places: Int) -> String {
-         let formatter = NumberFormatter()
-         formatter.numberStyle = .decimal
-         formatter.minimumFractionDigits = places
-         formatter.maximumFractionDigits = places
-         
-         return formatter.string(from: NSNumber(value: value)) ?? ""
-     }
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = places
+        formatter.maximumFractionDigits = places
+        
+        return formatter.string(from: NSNumber(value: value)) ?? ""
+    }
+    
+    
     
 }

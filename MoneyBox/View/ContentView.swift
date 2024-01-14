@@ -39,7 +39,16 @@ struct ContentView: View {
                 
                     .onAppear{
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1){
-                            dashboardViewModel.fetchUserData()
+                            dashboardViewModel.fetchUserData(){success in
+                                if success{
+                                    print("successfully fetched user data")
+                                }
+                                
+                                else{
+                                    print("failed to get user data")
+                                }
+                                
+                            }
                         }
                     }
                    
