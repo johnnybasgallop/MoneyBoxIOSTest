@@ -13,7 +13,7 @@ class DashboardViewModel : ObservableObject {
     @Published var accounts : [InvestmentAccountModel] = []
     @Published var totalPlanValue : Double = 0.0
     @Published var loading : Bool = true
-
+    
     
     func fetchUserData(completion : @escaping (Bool) -> Void) {
         dataProvider.fetchProducts(){result in
@@ -49,18 +49,21 @@ class DashboardViewModel : ObservableObject {
     
     func handleAccountResponse(accounts : [Account], productResponses: [ProductResponse], completion: @escaping (Bool) -> Void) {
         
+        var dummyAccountArr : [InvestmentAccountModel] = []
+        
         for account in accounts {
             
             for response in productResponses {
                 
                 if response.wrapperID == account.wrapper?.id{
                     if let name = account.name,
+                       let id = response.id,
                        let value = account.wrapper?.totalValue,
                        let moneybox = response.moneybox,
                        let type = response.product?.categoryType{
-                        let model = InvestmentAccountModel(name: name, type: type, planValue: value, moneyBox: moneybox)
+                        let model = InvestmentAccountModel(id: id, name: name, type: type, planValue: value, moneyBox: moneybox, totalContributions: account.wrapper?.totalContributions, totalEarnings: account.wrapper?.earningsNet, totalEarningsAsPercentage: account.wrapper?.earningsAsPercentage, interestRate: response.product?.interestRate)
                         
-                        self.accounts.append(model)
+                        dummyAccountArr.append(model)
                         
                     }
                 }
@@ -69,6 +72,7 @@ class DashboardViewModel : ObservableObject {
         }
         
         print("listed accounts: \(self.accounts)")
+        self.accounts = dummyAccountArr
         completion(true)
     }
     

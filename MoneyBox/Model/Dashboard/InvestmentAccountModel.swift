@@ -8,8 +8,13 @@
 import Foundation
 
 struct InvestmentAccountModel : Hashable {
+    var id: Int
     var name : String
     var type: String
     var planValue : Double
     var moneyBox : Double
+    var totalContributions : Int?
+    var totalEarnings : Double?
+    var totalEarningsAsPercentage : Double?
+    var interestRate : String?
 }

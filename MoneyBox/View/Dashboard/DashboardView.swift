@@ -13,19 +13,22 @@ struct DashboardView: View {
     @EnvironmentObject var loginViewModel : LoginViewModel
     
     var body: some View {
-        VStack{
-            TopNav().padding(.bottom, 20)
-            
-            if dashboardViewModel.loading == true{
-                ProgressView().frame(width: screenWidth, height: screenHeight * 0.75)
-            }
-            
-            else if dashboardViewModel.loading == false{
-                ScrollView(showsIndicators: false){
-                    Details()
-                    Spacer()
-                    AccountList()
-                    Spacer()
+        NavigationView{
+            VStack{
+                TopNav().padding(.bottom, 20)
+                
+                if dashboardViewModel.loading == true{
+                    ProgressView().frame(width: screenWidth, height: screenHeight * 0.75)
+                }
+                
+                else if dashboardViewModel.loading == false{
+                    ScrollView(showsIndicators: false){
+                        Details()
+                        Spacer()
+                        AccountList()
+                        Spacer()
+                    }
+                    
                 }
             }
         }
@@ -67,7 +70,8 @@ struct AccountList : View {
     var body: some View {
         VStack{
             ForEach(dashboardViewModel.accounts, id: \.self){account in
-                AccountCard(title: account.name, type: account.type, planValue: account.planValue, moneyBox: account.moneyBox)
+                AccountCard(id: account.id, title: account.name, type: account.type, planValue: account.planValue, moneyBox: account.moneyBox, totalContributions: account.totalContributions, totalEarnings: account.totalEarnings, totalEarningsAsPercentage: account.totalEarningsAsPercentage, interestRate: account.interestRate)
+                
             }
         }
     }

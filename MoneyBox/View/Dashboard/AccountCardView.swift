@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import Networking
 
 
 struct AccountCard : View {
     @EnvironmentObject var dashboardViewModel : DashboardViewModel
+    
+    var id: Int
     var title : String
     var type: String
     var planValue : Double
     var moneyBox : Double
+    var totalContributions : Int?
+    var totalEarnings : Double?
+    
+    var totalEarningsAsPercentage : Double?
+    var interestRate : String?
     
     var body: some View {
         
@@ -26,16 +34,17 @@ struct AccountCard : View {
                 .foregroundColor(.white)
                 .shadow(color: Color.black.opacity(0.4), radius: 6, x: 0, y: 4)
             
-            Button(action: {
-                print("pressed")
-            }, label: {
-                AccountData(title: title, type: type, planValue: planValueFormatted, moneyBox: moneyBoxFormatted)
+            NavigationLink(destination:
+                            AddMoneyView(id: id, title: title, type: type, planValue: planValue, moneyBox: moneyBox, totalContributions: totalContributions, totalEarnings: totalEarnings, totalEarningsAsPercentage: totalEarningsAsPercentage, interestRate: interestRate).environmentObject(dashboardViewModel)){
                 
-            })
+                AccountData(title: title, type: type, planValue: planValueFormatted, moneyBox: moneyBoxFormatted)
+            }
             
-        }
+        }.padding(.bottom, 30)
+        
     }
 }
+
 
 
 
@@ -72,5 +81,6 @@ struct AccountData : View {
 
 
 #Preview {
-    AccountCard(title: "ISA", type: "Cash", planValue: 135.00, moneyBox: 20.00)
+    AccountCard(id: 1, title: "", type: "", planValue: 1.00, moneyBox: 1.00, totalContributions: Int(10.00), totalEarnings: 12.00, totalEarningsAsPercentage: 1.5, interestRate: "6.4%")
+        .environmentObject(DashboardViewModel())
 }

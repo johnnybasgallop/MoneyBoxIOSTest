@@ -38,7 +38,7 @@ struct ContentView: View {
                     .environmentObject(dashboardViewModel)
                 
                     .onAppear{
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1){
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
                             dashboardViewModel.fetchUserData(){success in
                                 if success{
                                     print("successfully fetched user data")
@@ -51,12 +51,12 @@ struct ContentView: View {
                             }
                         }
                     }
-                   
-                   
-                  
+                
+                
+                
             }
         }
-      
+        
     }
 }
 
