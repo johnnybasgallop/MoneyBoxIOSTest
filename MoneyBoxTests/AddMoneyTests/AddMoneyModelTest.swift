@@ -11,9 +11,5 @@ import Networking
 
 final class AddMoneyModelTest: XCTestCase {
     
-    
-    
-    
-    
-    
+  
 }

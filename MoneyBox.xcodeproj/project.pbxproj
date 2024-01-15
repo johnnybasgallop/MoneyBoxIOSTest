@@ -50,6 +50,7 @@
 		CA1C9F972B54954900398791 /* AddMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyView.swift; sourceTree = "<group>"; };
 		CA1C9F992B54955300398791 /* AddMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyViewModel.swift; sourceTree = "<group>"; };
 		CA1C9F9E2B54D1A100398791 /* AddMoneyModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyModelTest.swift; sourceTree = "<group>"; };
+		CA1C9FA02B553AE800398791 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = text; path = Networking; sourceTree = SOURCE_ROOT; };
 		CA950DCD2B5167CC00E0DFCD /* MoneyBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxTests.swift; sourceTree = "<group>"; };
 		CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTests.swift; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		CAB2099F2B4DC44300D087E4 /* MoneyBox */ = {
 			isa = PBXGroup;
 			children = (
+				CA1C9FA02B553AE800398791 /* Networking */,
 				CAB209B92B4DDF5000D087E4 /* Model */,
 				CAB209B72B4DDF3A00D087E4 /* View */,
 				CAB209A42B4DC44500D087E4 /* Assets.xcassets */,
