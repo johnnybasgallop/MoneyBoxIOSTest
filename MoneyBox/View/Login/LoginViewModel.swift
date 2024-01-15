@@ -21,6 +21,7 @@ final class LoginViewModel: ObservableObject {
     @Published var userInfo  : UserInfo = UserInfo(name: "", loggedin: false)
     @Published var wrongPin : Bool = false
     @Published var pin : String = ""
+    @Published var LoginError : Bool = false
     
     
     func loginUserWithEmailAndPassword(username: String, password: String, completion: @escaping (String) -> Void){
@@ -34,13 +35,13 @@ final class LoginViewModel: ObservableObject {
             switch result {
 
             case .success(let response):
-                print("user exists")
                 
-                print("token is: \(response.session.bearerToken)")
-                
-                self.savedUsername = username
-                self.savedPassword = password
-                self.token = response.session.bearerToken
+                withAnimation{
+                    self.savedUsername = username
+                    self.savedPassword = password
+                    self.token = response.session.bearerToken
+                }
+               
                  
                 guard let name = response.user.firstName else{return}
                 
@@ -48,13 +49,14 @@ final class LoginViewModel: ObservableObject {
                 
                 self.sessionManager.setUserToken(response.session.bearerToken)
                 
-                completion("success")
+                completion("successfully logged user in")
                 
                 
                 
             case.failure(let response):
                 print("\(response.localizedDescription)")
-                completion("failed")
+                completion("failed to login user")
+                self.LoginError = true
             }
             
         }

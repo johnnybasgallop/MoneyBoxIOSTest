@@ -116,7 +116,7 @@ struct DoubleStat : View {
         HStack{
             Text("\(tag)").foregroundColor(.gray).font(.system(size: 18))
             Spacer()
-            Text("\(currency ? "£" : "")\(new)").font(.system(size: 20, weight: .bold))
+            Text("\(currency ? "£" : "")\(new)\(tag == "Earnings %" ? "%" : "")").font(.system(size: 20, weight: .bold))
         }.padding(.top, 1)
     }
 }

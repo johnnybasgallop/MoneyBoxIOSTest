@@ -16,11 +16,10 @@ extension DashboardViewModel {
         dataProvider.addMoney(request: model){result in
             switch result{
             case .success(let response):
-                print(response.moneybox)
                 completion(true)
                 
             case .failure(let response):
-                print("failed to add money")
+                print("failed to add money to box")
                 completion(false)
             }
         }

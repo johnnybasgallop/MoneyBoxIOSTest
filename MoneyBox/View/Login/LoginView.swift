@@ -108,11 +108,14 @@ struct LoginButton: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
     @Binding var email: String
     @Binding var password: String
+    @State var isPresented : Bool = false
 
     var body: some View {
         Button(action: {
             loginViewModel.loginUserWithEmailAndPassword(username: email, password: password) {success in
-                print(success)
+                if success == "failed to login user"{
+                    self.isPresented = true
+                }
             }
         }) {
             Text("Login")
@@ -122,6 +125,17 @@ struct LoginButton: View {
         }
         .background(email.isEmpty == false && password.isEmpty == false ? Color("primaryColor") : Color.gray)
         .cornerRadius(10)
+        
+        .alert(isPresented: $isPresented ) {
+            Alert(
+                title: Text("Error logging in"),
+                message: Text("Sorry we cant log you in at this time, try re-entering your email and password or waiting 5 minutes"),
+                dismissButton:  .default(Text("Dismiss")) {
+                    isPresented = false
+                }
+              
+            )
+        }
     }
 }
 

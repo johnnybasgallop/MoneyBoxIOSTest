@@ -12,7 +12,7 @@
 		CA1C9F952B54844F00398791 /* DashboardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F942B54844F00398791 /* DashboardModelTests.swift */; };
 		CA1C9F982B54954900398791 /* AddMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F972B54954900398791 /* AddMoneyView.swift */; };
 		CA1C9F9A2B54955300398791 /* AddMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F992B54955300398791 /* AddMoneyViewModel.swift */; };
-		CA1C9F9F2B54D1A100398791 /* AddMoneyModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9F9E2B54D1A100398791 /* AddMoneyModelTest.swift */; };
+		CA1C9FA22B5548F900398791 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C9FA12B5548F900398791 /* SplashScreenView.swift */; };
 		CA950DD02B5167CC00E0DFCD /* MoneyBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */; };
 		CA950DD82B51681C00E0DFCD /* LoginModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */; };
 		CA950DDC2B517E5900E0DFCD /* PinModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA950DDB2B517E5900E0DFCD /* PinModelTests.swift */; };
@@ -49,8 +49,8 @@
 		CA1C9F942B54844F00398791 /* DashboardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModelTests.swift; sourceTree = "<group>"; };
 		CA1C9F972B54954900398791 /* AddMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyView.swift; sourceTree = "<group>"; };
 		CA1C9F992B54955300398791 /* AddMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyViewModel.swift; sourceTree = "<group>"; };
-		CA1C9F9E2B54D1A100398791 /* AddMoneyModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyModelTest.swift; sourceTree = "<group>"; };
 		CA1C9FA02B553AE800398791 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = text; path = Networking; sourceTree = SOURCE_ROOT; };
+		CA1C9FA12B5548F900398791 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CA950DCD2B5167CC00E0DFCD /* MoneyBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxTests.swift; sourceTree = "<group>"; };
 		CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTests.swift; sourceTree = "<group>"; };
@@ -108,18 +108,9 @@
 			path = AddMoney;
 			sourceTree = "<group>";
 		};
-		CA1C9F9D2B54D18900398791 /* AddMoneyTests */ = {
-			isa = PBXGroup;
-			children = (
-				CA1C9F9E2B54D1A100398791 /* AddMoneyModelTest.swift */,
-			);
-			path = AddMoneyTests;
-			sourceTree = "<group>";
-		};
 		CA950DCE2B5167CC00E0DFCD /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA1C9F9D2B54D18900398791 /* AddMoneyTests */,
 				CA1C9F8D2B54829800398791 /* DashboardTests */,
 				CA950DD62B5167F800E0DFCD /* LoginTests */,
 				CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */,
@@ -190,6 +181,7 @@
 				CAB209BA2B4DE01700D087E4 /* Login */,
 				CAB209A02B4DC44300D087E4 /* MoneyBoxApp.swift */,
 				CAB209A22B4DC44300D087E4 /* ContentView.swift */,
+				CA1C9FA12B5548F900398791 /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1C9F952B54844F00398791 /* DashboardModelTests.swift in Sources */,
-				CA1C9F9F2B54D1A100398791 /* AddMoneyModelTest.swift in Sources */,
 				CA950DD02B5167CC00E0DFCD /* MoneyBoxTests.swift in Sources */,
 				CA950DD82B51681C00E0DFCD /* LoginModelTests.swift in Sources */,
 				CA950DDC2B517E5900E0DFCD /* PinModelTests.swift in Sources */,
@@ -353,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1C9FA22B5548F900398791 /* SplashScreenView.swift in Sources */,
 				CA1C9F982B54954900398791 /* AddMoneyView.swift in Sources */,
 				CAB209A32B4DC44300D087E4 /* ContentView.swift in Sources */,
 				CAB209A12B4DC44300D087E4 /* MoneyBoxApp.swift in Sources */,

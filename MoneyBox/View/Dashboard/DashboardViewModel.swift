@@ -27,20 +27,19 @@ class DashboardViewModel : ObservableObject {
                 guard let responses = response.productResponses else {return}
                 self.handleAccountResponse(accounts: accounts, productResponses: responses){success in
                     if success{
-                        print("success")
                         self.loading = false
                         completion(true)
                     }
                     
                     else if !success
                     {
-                        print("failed")
+                        print("failed to handle account response when fetching user data")
                         completion(false)
                     }
                 }
                 
             case .failure(let response):
-                print(response)
+                print("failed to fetch user data")
                 completion(false)
             }
         }
@@ -71,8 +70,8 @@ class DashboardViewModel : ObservableObject {
             }
         }
         
-        print("listed accounts: \(self.accounts)")
         self.accounts = dummyAccountArr
+        print("listed accounts: \(self.accounts)")
         completion(true)
     }
     
