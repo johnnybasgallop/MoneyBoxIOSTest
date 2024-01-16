@@ -1,30 +1,35 @@
 For this project my main goal was to go above and beyond the spec required.
 
 I began with implementing a simple splash screen to greet the user when opening the application:
+![Moneybox-splash](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/5f4bb7c5-1a0e-4304-8f16-45987e0deed2)
 
-![IMG_3706](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/18d08654-8df7-4df6-a920-e50864a05c98)
+
+
 
 After that i built a simple login screen only using static variables for authentication:
 
-![IMG_3711](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/927f3a64-748a-4931-b597-f8575392bd7c)
+![Moneybox-Login](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/df3ecb46-c6c0-4785-9971-fb674a11add8)
 
 Next i added in Create pin and Enter pin functionality to mimic the real moneyBox application:
 
-![IMG_3712![IMG_3707](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/2aa02140-d556-45f3-ac21-d42a2fd68476)
-](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/e60ecf3f-92c2-408c-9d48-b65d9cb5c08e)
+![Moneybox-enterPin](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/b2093fbc-d474-4bb6-bd85-23d578ff0dd0)
+![Moneybox-createPin](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/79f0eddd-e6a2-44b8-ad22-079b31139730)
+
 
 My Next step was to develop logout functionality to allow the user to easily return to the login screen:
 
-![IMG_3709](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/05ea62f0-e8fd-45b6-b718-492cc905709e)
+![MoneyBox-logout](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/fe9fbb12-eef1-4b2f-a012-76233b74ccdc)
+
 
 Next i built the functionality to fetch and store the users moneyBox account data into a custom model, then displayed via a custom Card component, the idea here was to keep it minimilistic and simple:
 
-![IMG_3708](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/b2039abb-59df-47fe-bd15-d93a830d8b2a)
+![MoneyBox-cards](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/895d9351-75bb-4cf3-9c17-d0b06930ff61)
+
 
 Finally i added in a navigation link for each card and passed the data through in an efficient manor, i implemented logic to show more account details dependent on the account type, and built a modern yet simplistic add money
 section which allows users to add money to their moneybox in multiples of 5:
 
-![IMG_3710](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/10c2418a-6368-424c-a873-79af9174917c)
+![Moneybox-details](https://github.com/johnnybasgallop/MoneyBoxIOSTest/assets/94317860/057f0456-338a-426d-ab49-bf235f15f100)
 
 
 
