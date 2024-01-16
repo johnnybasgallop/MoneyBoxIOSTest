@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CA30ADCD2B560D00005E0349 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB209952B4DC44300D087E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB2099C2B4DC44300D087E4;
+			remoteInfo = MoneyBox;
+		};
 		CA950DD12B5167CC00E0DFCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CAB209952B4DC44300D087E4 /* Project object */;
@@ -51,6 +58,7 @@
 		CA1C9F992B54955300398791 /* AddMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyViewModel.swift; sourceTree = "<group>"; };
 		CA1C9FA02B553AE800398791 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = text; path = Networking; sourceTree = SOURCE_ROOT; };
 		CA1C9FA12B5548F900398791 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		CA30ADC92B560D00005E0349 /* What2EatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = What2EatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA950DCD2B5167CC00E0DFCD /* MoneyBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA950DCF2B5167CC00E0DFCD /* MoneyBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxTests.swift; sourceTree = "<group>"; };
 		CA950DD72B51681C00E0DFCD /* LoginModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelTests.swift; sourceTree = "<group>"; };
@@ -73,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA30ADC62B560D00005E0349 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA950DCA2B5167CC00E0DFCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +164,7 @@
 			children = (
 				CAB2099D2B4DC44300D087E4 /* MoneyBox.app */,
 				CA950DCD2B5167CC00E0DFCD /* MoneyBoxTests.xctest */,
+				CA30ADC92B560D00005E0349 /* What2EatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +246,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA30ADC82B560D00005E0349 /* What2EatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA30ADD12B560D00005E0349 /* Build configuration list for PBXNativeTarget "What2EatTests" */;
+			buildPhases = (
+				CA30ADC52B560D00005E0349 /* Sources */,
+				CA30ADC62B560D00005E0349 /* Frameworks */,
+				CA30ADC72B560D00005E0349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA30ADCE2B560D00005E0349 /* PBXTargetDependency */,
+			);
+			name = What2EatTests;
+			productName = What2EatTests;
+			productReference = CA30ADC92B560D00005E0349 /* What2EatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CA950DCC2B5167CC00E0DFCD /* MoneyBoxTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA950DD52B5167CC00E0DFCD /* Build configuration list for PBXNativeTarget "MoneyBoxTests" */;
@@ -278,6 +312,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					CA30ADC82B560D00005E0349 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CAB2099C2B4DC44300D087E4;
+					};
 					CA950DCC2B5167CC00E0DFCD = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = CAB2099C2B4DC44300D087E4;
@@ -305,11 +343,19 @@
 			targets = (
 				CAB2099C2B4DC44300D087E4 /* MoneyBox */,
 				CA950DCC2B5167CC00E0DFCD /* MoneyBoxTests */,
+				CA30ADC82B560D00005E0349 /* What2EatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA30ADC72B560D00005E0349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA950DCB2B5167CC00E0DFCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,6 +375,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA30ADC52B560D00005E0349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA950DC92B5167CC00E0DFCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +420,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA30ADCE2B560D00005E0349 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB2099C2B4DC44300D087E4 /* MoneyBox */;
+			targetProxy = CA30ADCD2B560D00005E0349 /* PBXContainerItemProxy */;
+		};
 		CA950DD22B5167CC00E0DFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CAB2099C2B4DC44300D087E4 /* MoneyBox */;
@@ -375,6 +433,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA30ADCF2B560D00005E0349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.WhatToEat.What2EatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneyBox";
+			};
+			name = Debug;
+		};
+		CA30ADD02B560D00005E0349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DB62R67D27;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.basgallop.WhatToEat.What2EatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneyBox";
+			};
+			name = Release;
+		};
 		CA950DD32B5167CC00E0DFCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -597,6 +691,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA30ADD12B560D00005E0349 /* Build configuration list for PBXNativeTarget "What2EatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA30ADCF2B560D00005E0349 /* Debug */,
+				CA30ADD02B560D00005E0349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA950DD52B5167CC00E0DFCD /* Build configuration list for PBXNativeTarget "MoneyBoxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

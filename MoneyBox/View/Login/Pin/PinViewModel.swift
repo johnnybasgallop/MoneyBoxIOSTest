@@ -13,11 +13,20 @@ extension LoginViewModel {
     func loginUserWithPin(pin: String, completion: @escaping (Bool) -> Void){
         if pin == loginPin{
             
-            loginUserWithEmailAndPassword(username: self.savedUsername, password: self.savedPassword){success in}
-            withAnimation{
-                userInfo.loggedin = true
+            loginUserWithEmailAndPassword(username: self.savedUsername, password: self.savedPassword){success in
+                if success == "successfully logged user in"{
+                    withAnimation{
+                        self.userInfo.loggedin = true
+                    }
+                    completion(true)
+                }
+                
+                else
+                {
+                   completion(false)
+                }
             }
-            completion(true)
+            
         }
           
         else if pin != loginPin{
